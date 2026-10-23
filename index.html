@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>병신생 건명 감정서</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #121826;
+            --bg-card: #182234;
+            --bg-card-hover: #1f2b42;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            --border: #24324d;
+            --border-light: #334466;
+            
+            /* Five Elements Color System */
+            --wood-color: #10b981;
+            --wood-bg: rgba(16, 185, 129, 0.12);
+            --fire-color: #ef4444;
+            --fire-bg: rgba(239, 68, 68, 0.15);
+            --earth-color: #f59e0b;
+            --earth-bg: rgba(245, 158, 11, 0.12);
+            --metal-color: #e2e8f0;
+            --metal-bg: rgba(226, 232, 240, 0.15);
+            --water-color: #38bdf8;
+            --water-bg: rgba(56, 189, 248, 0.12);
+
+            --gold-accent: #d4af37;
+            --gold-light: #fef08a;
+            --gold-gradient: linear-gradient(135deg, #d4af37 0%, #fef08a 50%, #b45309 100%);
+            --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        /* Header & Hero Section */
+        header {
+            text-align: center;
+            padding: 50px 30px;
+            background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.15) 0%, rgba(18, 24, 38, 0.95) 70%);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 3px;
+            background: var(--gold-gradient);
+        }
+
+        .badge-pill {
+            display: inline-block;
+            padding: 6px 18px;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold-accent);
+            border-radius: 30px;
+            color: var(--gold-light);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 2.6rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto 30px auto;
+            word-break: keep-all;
+        }
+
+        .profile-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            background: rgba(10, 14, 23, 0.6);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .profile-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .profile-label {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            font-weight: 600;
+        }
+
+        .profile-val {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 45px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .section-num {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--gold-accent);
+            color: #0a0e17;
+            font-weight: 800;
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+
+        .section-title {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        /* Pillars Visual Board */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 25px;
+        }
+
+        .pillar-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px 14px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold-accent);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+        }
+
+        .pillar-tag {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .pillar-element {
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .char-box {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+
+        .char-kor {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .ten-god {
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 6px;
+        }
+
+        /* Five Elements Badges */
+        .elem-fire { color: var(--fire-color); background: var(--fire-bg); }
+        .elem-metal { color: var(--metal-color); background: var(--metal-bg); }
+        .elem-wood { color: var(--wood-color); background: var(--wood-bg); }
+        .elem-water { color: var(--water-color); background: var(--water-bg); }
+        .elem-earth { color: var(--earth-color); background: var(--earth-bg); }
+
+        .pillar-footer {
+            margin-top: 14px;
+            padding-top: 10px;
+            border-top: 1px solid var(--border);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Five Elements Summary Bar */
+        .elements-summary {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        .elements-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .elem-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .elem-name {
+            width: 75px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .progress-track {
+            flex: 1;
+            height: 10px;
+            background: #0d131f;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+
+        .elem-count {
+            width: 50px;
+            text-align: right;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+
+        .structure-callout {
+            background: var(--bg-card);
+            border-left: 4px solid var(--gold-accent);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .structure-callout h4 {
+            font-size: 1.05rem;
+            color: var(--gold-light);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .structure-callout p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Three Core Dynamics */
+        .core-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 35px;
+        }
+
+        .core-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 22px;
+            position: relative;
+        }
+
+        .core-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 3px;
+        }
+
+        .core-card.c-metal::before { background: var(--metal-color); }
+        .core-card.c-wood::before { background: var(--wood-color); }
+        .core-card.c-water::before { background: var(--water-color); }
+
+        .core-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .core-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        /* Domain 6 Grid */
+        .domain-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .domain-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .domain-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .domain-header-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .domain-icon {
+            font-size: 1.4rem;
+        }
+
+        .domain-name {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .domain-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--gold-light);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .domain-text {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .domain-action {
+            margin-top: auto;
+            background: rgba(10, 14, 23, 0.6);
+            padding: 12px 16px;
+            border-radius: 10px;
+            border-left: 3px solid var(--gold-accent);
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        .domain-action strong {
+            color: var(--gold-light);
+        }
+
+        /* Timeline Table & Visuals */
+        .timeline-container {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            overflow-x: auto;
+        }
+
+        .timeline-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .timeline-table th {
+            background: #0d131f;
+            padding: 14px 16px;
+            color: var(--gold-light);
+            font-weight: 700;
+            border-bottom: 2px solid var(--border);
+            white-space: nowrap;
+        }
+
+        .timeline-table td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: middle;
+        }
+
+        .timeline-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .timeline-table tr.current-daewoon td {
+            background: rgba(212, 175, 55, 0.06);
+            border-left: 3px solid var(--gold-accent);
+        }
+
+        .active-badge {
+            background: var(--gold-accent);
+            color: #000;
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 6px;
+        }
+
+        /* Year & Month Crisis Timeline */
+        .year-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .year-card.highlight-danger {
+            border-color: #ef4444;
+            background: linear-gradient(180deg, rgba(239, 68, 68, 0.06) 0%, var(--bg-card) 100%);
+        }
+
+        .year-card.highlight-gold {
+            border-color: var(--gold-accent);
+            background: linear-gradient(180deg, rgba(212, 175, 55, 0.06) 0%, var(--bg-card) 100%);
+        }
+
+        .year-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .year-title-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .year-badge {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .year-status-pill {
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        .pill-danger { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid #ef4444; }
+        .pill-warning { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+        .pill-success { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+
+        .month-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .month-item {
+            background: rgba(10, 14, 23, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 14px;
+        }
+
+        .month-tag {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 4px;
+        }
+
+        .month-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Alternative Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            margin-top: 15px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .comparison-table th {
+            background: #0d131f;
+            padding: 14px;
+            font-weight: 700;
+            color: var(--gold-light);
+            text-align: center;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .comparison-table td {
+            padding: 14px;
+            border-bottom: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        .comparison-table td:last-child {
+            border-right: none;
+        }
+
+        /* 4 Step Roadmap */
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .roadmap-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .step-num {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--gold-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .step-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .step-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Notice / Footer */
+        .disclaimer-box {
+            background: rgba(18, 24, 38, 0.8);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.84rem;
+            color: var(--text-dim);
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .table-scroll { overflow-x: auto; }
+        .note-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px; margin-top: 16px; font-size: 0.85rem; color: var(--text-muted); }
+        .note-box strong { color: var(--gold-light); }
+        .note-box ul { margin: 6px 0 0 18px; }
+        .past { opacity: 0.6; }
+        @media print {
+            body { background: #fff; color: #000; padding: 0; }
+            body * { background: transparent !important; color: #000 !important; box-shadow: none !important; }
+            h1 { -webkit-text-fill-color: #000; }
+            .year-card, .domain-card, .pillar-card { break-inside: avoid; }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .pillars-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .domain-grid, .core-grid, .roadmap-grid {
+                grid-template-columns: 1fr;
+            }
+            .elements-summary {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding: 15px 10px;
+            }
+            header {
+                padding: 30px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header Section -->
+    <header>
+        <div class="badge-pill">Traditional Saju Deep Analysis</div>
+        <h1>정통 명리학 사주 심층 정밀 감정서</h1>
+        <p class="subtitle">1956년 병신(丙申)년생 건명(남성) 사주의 타고난 오행 역학 구조와 평생의 대운·세운 변곡점 총정리</p>
+        
+        <div class="profile-strip">
+            <div class="profile-item">
+                <span class="profile-label">출생 정보</span>
+                <span class="profile-val">1956년 음력 1월 12일 밤 12시 (시각 해석 2가지)</span>
+            </div>
+            <div class="profile-item">
+                <span class="profile-label">양력 환산</span>
+                <span class="profile-val">1956년 2월 23일 0시 자시(子時) · 해석 A</span>
+            </div>
+            <div class="profile-item">
+                <span class="profile-label">성별 및 지역</span>
+                <span class="profile-val">건명(남성) · 전라도</span>
+            </div>
+            <div class="profile-item">
+                <span class="profile-label">표준시 및 대운수</span>
+                <span class="profile-val">당시 UTC+8:30 · 순행 · 대운수 4 (1960년 2월경 시작)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Four Pillars (사주원국표) -->
+    <section>
+        <div class="section-header">
+            <div class="section-num">1</div>
+            <div class="section-title">사주원국(四柱原局) 분석표</div>
+        </div>
+
+        <div class="pillars-grid">
+            <!-- 시주 -->
+            <div class="pillar-card">
+                <div class="pillar-tag">시주 (말년·자식)</div>
+                <div class="pillar-element elem-fire">
+                    <div class="char-box">丙</div>
+                    <div class="char-kor">병화 (陽火)</div>
+                    <span class="ten-god elem-fire">편관 (偏官)</span>
+                </div>
+                <div class="pillar-element elem-water">
+                    <div class="char-box">子</div>
+                    <div class="char-kor">자수 (陽水)</div>
+                    <span class="ten-god elem-water">상관 (傷官) · 용신</span>
+                </div>
+                <div class="pillar-footer">12운성: 사(死) · 지혜의 배출구</div>
+            </div>
+
+            <!-- 일주 -->
+            <div class="pillar-card" style="border-color: rgba(212, 175, 55, 0.4);">
+                <div class="pillar-tag" style="color: var(--gold-light);">★ 일주 (본인·배우자)</div>
+                <div class="pillar-element elem-metal">
+                    <div class="char-box">庚</div>
+                    <div class="char-kor">경금 (陽金)</div>
+                    <span class="ten-god elem-metal">일간 (본인·무쇠)</span>
+                </div>
+                <div class="pillar-element elem-metal">
+                    <div class="char-box">申</div>
+                    <div class="char-kor">신금 (陽金)</div>
+                    <span class="ten-god elem-metal">비견 (건록 健祿)</span>
+                </div>
+                <div class="pillar-footer">12운성: 건록(建祿) · 강력한 자아</div>
+            </div>
+
+            <!-- 월주 -->
+            <div class="pillar-card">
+                <div class="pillar-tag">월주 (사회·직업·재물)</div>
+                <div class="pillar-element elem-metal">
+                    <div class="char-box">庚</div>
+                    <div class="char-kor">경금 (陽金)</div>
+                    <span class="ten-god elem-metal">비견 (比肩)</span>
+                </div>
+                <div class="pillar-element elem-wood">
+                    <div class="char-box">寅</div>
+                    <div class="char-kor">인목 (陽木)</div>
+                    <span class="ten-god elem-wood">편재 (偏財) · 큰 재물</span>
+                </div>
+                <div class="pillar-footer">12운성: 절(絶) · 인신충(寅申沖)</div>
+            </div>
+
+            <!-- 연주 -->
+            <div class="pillar-card">
+                <div class="pillar-tag">연주 (조상·초년)</div>
+                <div class="pillar-element elem-fire">
+                    <div class="char-box">丙</div>
+                    <div class="char-kor">병화 (陽火)</div>
+                    <span class="ten-god elem-fire">편관 (偏官)</span>
+                </div>
+                <div class="pillar-element elem-metal">
+                    <div class="char-box">申</div>
+                    <div class="char-kor">신금 (陽金)</div>
+                    <span class="ten-god elem-metal">비견 (건록 健祿)</span>
+                </div>
+                <div class="pillar-footer">12운성: 건록(建祿) · 병신생(원숭이)</div>
+            </div>
+        </div>
+
+        <!-- Five Elements Distribution & Core Dynamics -->
+        <div class="elements-summary">
+            <div class="elements-bars">
+                <div class="elem-row">
+                    <span class="elem-name" style="color: var(--metal-color);">금 (金·쇠)</span>
+                    <div class="progress-track"><div class="progress-fill" style="width: 50%; background: var(--metal-color);"></div></div>
+                    <span class="elem-count">4개 (50%)</span>
+                </div>
+                <div class="elem-row">
+                    <span class="elem-name" style="color: var(--fire-color);">화 (火·불)</span>
+                    <div class="progress-track"><div class="progress-fill" style="width: 25%; background: var(--fire-color);"></div></div>
+                    <span class="elem-count">2개 (25%)</span>
+                </div>
+                <div class="elem-row">
+                    <span class="elem-name" style="color: var(--wood-color);">목 (木·나무)</span>
+                    <div class="progress-track"><div class="progress-fill" style="width: 12.5%; background: var(--wood-color);"></div></div>
+                    <span class="elem-count">1개 (12.5%)</span>
+                </div>
+                <div class="elem-row">
+                    <span class="elem-name" style="color: var(--water-color);">수 (水·물)</span>
+                    <div class="progress-track"><div class="progress-fill" style="width: 12.5%; background: var(--water-color);"></div></div>
+                    <span class="elem-count">1개 (12.5%)</span>
+                </div>
+                <div class="elem-row">
+                    <span class="elem-name" style="color: var(--earth-color);">토 (土·흙)</span>
+                    <div class="progress-track"><div class="progress-fill" style="width: 0%; background: var(--earth-color);"></div></div>
+                    <span class="elem-count">0개 (0%)</span>
+                </div>
+            </div>
+
+            <div class="structure-callout">
+                <h4>⚖️ 사주 구조의 핵심 요약</h4>
+                <p>본 사주는 <strong>금(金) 4개</strong>로 뿌리가 굳건한 <strong>'극강(極強)의 신강(身強) 사주'</strong>입니다. 겉으로 드러난 토(인성)의 온실 보호 없이, 하늘의 뜨거운 불(병화)로 무쇠(경금)를 제련하여 스스로 길을 개척하는 대기만성형 자수성가 명조입니다.</p>
+            </div>
+        </div>
+
+        <!-- 3 Core Dynamics Cards -->
+        <div class="core-grid">
+            <div class="core-card c-metal">
+                <div class="core-title" style="color: var(--metal-color);">
+                    <span>⚔️</span> 단련되는 강철 (화극금)
+                </div>
+                <div class="core-desc">
+                    하늘에 두 개의 병화(불)가 무쇠를 녹여 쓸모 있는 도구로 벼려냅니다. 강한 책임감, 공명정대함, 명예욕을 지녔으며 역경 속에서 더욱 강해지는 체질입니다.
+                </div>
+            </div>
+
+            <div class="core-card c-wood">
+                <div class="core-title" style="color: var(--wood-color);">
+                    <span>⚡</span> 역마의 정면 충돌 (인신충)
+                </div>
+                <div class="core-desc">
+                    월지의 인목(큰 재물)을 좌우의 신금(신체·동료)이 강하게 부딪칩니다. 평생 한곳에 머물지 않고 전국과 현장을 누비며 부를 일구는 강력한 활동력의 원천입니다.
+                </div>
+            </div>
+
+            <div class="core-card c-water">
+                <div class="core-title" style="color: var(--water-color);">
+                    <span>💧</span> 생명의 배출구 (시지 자수)
+                </div>
+                <div class="core-desc">
+                    말년 자리에 놓인 자수(子水)는 강한 쇠 기운을 부드럽게 설기(洩氣)시키고 불의 과열을 막아주는 핵심 <strong>용신(用神)</strong>으로, 노년의 지혜와 건강을 지킵니다.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Comprehensive Domain Analysis -->
+    <section>
+        <div class="section-header">
+            <div class="section-num">2</div>
+            <div class="section-title">인생 분야별 정밀 총정리</div>
+        </div>
+
+        <div class="domain-grid">
+            <!-- 총운 -->
+            <div class="domain-card">
+                <div class="domain-top">
+                    <div class="domain-header-left">
+                        <span class="domain-icon">🧭</span>
+                        <span class="domain-name">총운 (선천적 운명과 기조)</span>
+                    </div>
+                    <span class="domain-tag">자수성가형</span>
+                </div>
+                <div class="domain-text">
+                    부모나 가문의 유산에 기대지 않고 오직 자신의 기술과 뚝심으로 인생을 일구는 개척자의 명조입니다. 결단력이 대단히 빠르고 맺고 끊음이 분명합니다. 인생 초·중반에는 거친 풍파와 이동을 겪으나, 후반으로 갈수록 내공이 빛을 발하는 대기만성형 구조입니다.
+                </div>
+                <div class="domain-action">
+                    <strong>핵심 조언:</strong> 의리와 체면보다 내실을 중시하고, 무리한 독단보다 경청의 태도를 취할 때 운이 상승합니다.
+                </div>
+            </div>
+
+            <!-- 직업운 -->
+            <div class="domain-card">
+                <div class="domain-top">
+                    <div class="domain-header-left">
+                        <span class="domain-icon">💼</span>
+                        <span class="domain-name">직업운 (사회적 적성)</span>
+                    </div>
+                    <span class="domain-tag">현장·통솔직</span>
+                </div>
+                <div class="domain-text">
+                    책상 앞에 앉아 서류만 검토하는 사무직과는 맞지 않습니다. 쇠(금)와 불(화)을 다루는 기술직, 금속·기계·토목·건설·전기 현장 지휘, 운송·물류·무역 등 이동성이 강한 업종, 혹은 조직의 대표로서 스스로 결정권을 쥐는 독립 사업에서 최고의 역량을 발휘합니다.
+                </div>
+                <div class="domain-action">
+                    <strong>추천 적성:</strong> 엔지니어링, 현장 관리 소장, 독자적 사업체 운영, 특수 기술 전문직.
+                </div>
+            </div>
+
+            <!-- 금전운 -->
+            <div class="domain-card">
+                <div class="domain-top">
+                    <div class="domain-header-left">
+                        <span class="domain-icon">💰</span>
+                        <span class="domain-name">금전운 (재물과 자산)</span>
+                    </div>
+                    <span class="domain-tag">수성(守成) 필수</span>
+                </div>
+                <div class="domain-text">
+                    월지 편재(인목)의 힘으로 큰돈을 만지고 유통하는 역량이 뛰어납니다. 그러나 신금(비견)들이 재물을 둘러싸고 있는 '군겁쟁재' 기운이 강하여, 친구·동료·동업·보증으로 인한 재물 유출 위험이 항상 도사립니다. 버는 기술보다 <strong>지키는 관리</strong>가 핵심입니다.
+                </div>
+                <div class="domain-action">
+                    <strong>자산 수성 전략:</strong> 유동 현금을 쥐고 있지 말고 본인 단독 명의의 부동산, 정기예금, 연금 등으로 자산을 묶어둘 것.
+                </div>
+            </div>
+
+            <!-- 건강운 -->
+            <div class="domain-card">
+                <div class="domain-top">
+                    <div class="domain-header-left">
+                        <span class="domain-icon">🏥</span>
+                        <span class="domain-name">건강운 (취약 부위와 관리)</span>
+                    </div>
+                    <span class="domain-tag">혈관·관절 주의</span>
+                </div>
+                <div class="domain-text">
+                    오행의 충돌(인신충, 화극금)로 인해 세 가지 영역을 평생 관리해야 합니다.<br>
+                    1) <strong>관절·척추:</strong> 인목(신경·간)이 금에 부딪히므로 무릎, 어깨, 척추 질환 및 낙상 사고 주의.<br>
+                    2) <strong>심혈관계:</strong> 불(화)과 물(수)의 대립으로 고혈압, 뇌혈관 질환 정기 검진 필수.<br>
+                    3) <strong>간담·호흡기:</strong> 스트레스성 간 기능 피로 및 기관지 관리 필요.
+                </div>
+                <div class="domain-action">
+                    <strong>건강 관리법:</strong> 온수 섭취, 과열된 화기를 식히는 가벼운 수변 산책, 유연성 스트레칭.
+                </div>
+            </div>
+
+            <!-- 연애/배우자운 -->
+            <div class="domain-card">
+                <div class="domain-top">
+                    <div class="domain-header-left">
+                        <span class="domain-icon">💍</span>
+                        <span class="domain-name">연애 및 배우자운</span>
+                    </div>
+                    <span class="domain-tag">거리 두기와 존중</span>
+                </div>
+                <div class="domain-text">
+                    배우자 자리(일지)에 본인과 똑같은 신금(비견)이 놓여 있어, 책임감은 지극하지만 표현이 무뚝뚝하고 고집이 강해 부부간에 양보 없는 설전이 발생하기 쉽습니다. 서로의 영역을 인정하고 적절한 심리적·공간적 거리를 둘 때 비로소 화목하고 평안해집니다.
+                </div>
+                <div class="domain-action">
+                    <strong>부부 화목 수칙:</strong> 하루 종일 간섭하기보다 각자의 취미 생활과 사적 영역을 철저히 존중해 줄 것.
+                </div>
+            </div>
+
+            <!-- 자식운 -->
+            <div class="domain-card">
+                <div class="domain-top">
+                    <div class="domain-header-left">
+                        <span class="domain-icon">👨‍👦</span>
+                        <span class="domain-name">자식운 (자녀와의 인연)</span>
+                    </div>
+                    <span class="domain-tag">독립적 수재형</span>
+                </div>
+                <div class="domain-text">
+                    자식을 상징하는 관성(병화)이 하늘에 뚜렷이 드러나 있어, 자녀들이 자립심과 기개가 출중하고 사회적으로 자기 자리를 번듯하게 잡는 인재가 됩니다. 부모를 닮아 주관이 뚜렷하므로 성인이 된 이후에는 지시나 간섭보다 격려하는 후원자의 태도가 필요합니다.
+                </div>
+                <div class="domain-action">
+                    <strong>자녀 관계 비결:</strong> 자녀의 결정을 믿고 맡기며, 재정적·정신적으로 조기 독립시키는 것이 상호 이익.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Decade Timeline (대운 10년 주기) -->
+    <section>
+        <div class="section-header">
+            <div class="section-num">3</div>
+            <div class="section-title">생애 대운(10년 주기) 흐름: 초년·중년·말년</div>
+        </div>
+
+        <div class="timeline-container">
+            <table class="timeline-table">
+                <thead>
+                    <tr>
+                        <th>대운 구분</th>
+                        <th>간지(干支)</th>
+                        <th>연령대 (서기)</th>
+                        <th>오행 역학 및 시기별 핵심 흐름</th>
+                        <th>상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>초년기</strong></td>
+                        <td>辛卯 · 壬辰</td>
+                        <td>4~23세 (1960~1979)</td>
+                        <td><strong>[독립 기반 형성기]</strong> 임진 대운(14~23세)에 신자진 수국을 형성하며 일찍부터 세상으로 나아가 기술을 익히고 자립의 기틀을 마련한 시기.</td>
+                        <td><span style="color: var(--text-dim);">지나감</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>중년 전반</strong></td>
+                        <td>癸巳 · 甲午</td>
+                        <td>24~43세 (1980~1999)</td>
+                        <td><strong>[격동과 사회적 성취기]</strong> 계사 대운에 인사신 삼형으로 인한 이직·이동을 겪고, 갑오 대운(34~43세)에 큰 재물과 사회적 지위를 쟁취하며 전성기 진입.</td>
+                        <td><span style="color: var(--text-dim);">지나감</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>중년 후반</strong></td>
+                        <td>乙未 · 丙申</td>
+                        <td>44~63세 (2000~2019)</td>
+                        <td><strong>[재물 수성과 전환기]</strong> 을미 대운의 경을합으로 재물 결실. 54~63세 병신 대운에는 연주와 동일한 기운이 겹쳐 거주지·사업장의 큰 변곡점을 통과.</td>
+                        <td><span style="color: var(--text-dim);">지나감</span></td>
+                    </tr>
+                    <tr class="current-daewoon">
+                        <td><strong>말년 전반</strong></td>
+                        <td>丁酉 (정유)</td>
+                        <td>64~73세 (2020~2029)</td>
+                        <td><strong>[명예 유지와 자산 방어기 — 현재]</strong> 정화(정관)로 품격을 유지하나, 지지 유금(겁재)으로 인해 주변인의 금전 요구, 동업, 무리한 투자를 차단해야 하는 수성 구간.</td>
+                        <td><span class="active-badge">현재 대운 (만 70세)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>말년 후반</strong></td>
+                        <td>戊戌 (무술)</td>
+                        <td>74~83세 (2030~2039)</td>
+                        <td><strong>[인생 최고의 완충 안정기]</strong> 평생 원국에 없던 토(土·인성)가 들어와 화기를 설기하고 금을 생하며, 술토가 월지 인목과 인술 반합을 이루어 인신충의 긴장을 묶어 주는 안정기. 다만 인술 반합은 화(火) 기운을 모으므로 혈압·심혈관 관리는 계속 필요.</td>
+                        <td><span style="color: var(--gold-light);">진입 예정 (2030년 2월경)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="note-box">
+            <strong>대운 연도 정정</strong>
+            <ul>
+                <li>출생(1956.2.23 0시)~경칩(1956.3.5 밤) 약 12일 ÷ 3 = 4년 → 첫 대운 1960년 2월경 시작, 이후 10년마다 2월경 교체</li>
+                <li>원본은 대운 연도를 1년씩 앞당겨 표기(정유 2019~2028, 무술 2029~) → 정유 2020~2029, 무술 2030~으로 정정</li>
+                <li>해석 B(13일 0시)로 보면 대운 시작이 1959년 10월경으로 약 4개월 당겨짐(무술 대운 2029년 10월경)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 4. Year & Month Crisis/Opportunity Guide -->
+    <section>
+        <div class="section-header">
+            <div class="section-num">4</div>
+            <div class="section-title">연도별·월별 핵심 사건 및 주의·기회 시기 (2026~2030)</div>
+        </div>
+
+        <!-- 2026 -->
+        <div class="year-card highlight-danger">
+            <div class="year-header">
+                <div class="year-title-group">
+                    <span class="year-badge">2026년 (병오년 丙午年 · 만 70세)</span>
+                    <span class="year-status-pill pill-danger">화(불) 과열 주의</span>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">현재 진행 중 (남은 경계 월: 11~12월)</div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                세운 전체가 거대한 불(병오)입니다. 사주 원국의 병화 2개와 합쳐져 불길이 극에 달하고, 시지의 유일한 오아시스인 자수(子水)와 <strong>자오충(子午沖·수화상충)</strong>을 일으킵니다. 명예로운 역할이 주어지나, 체온 조절, 혈압·심혈관 질환, 감정적 충돌에 가장 유의해야 하는 해입니다.
+            </p>
+            <div class="month-grid">
+                <div class="month-item">
+                    <div class="month-tag">2월 (경인월, 2/4~3/5) · 지남</div>
+                    <div class="month-desc">인신충 작동. 연초 보행 낙상, 관절 주의, 지인 금전 거래 사양.</div>
+                </div>
+                <div class="month-item" style="border-color: #ef4444;">
+                    <div class="month-tag" style="color: #f87171;">★ 6월 (갑오월, 6/6~7/6) · 지남</div>
+                    <div class="month-desc">불기운 최고조(자오충 격화). 혈압·심장 정밀 점검, 야외 무리 금지.</div>
+                </div>
+                <div class="month-item">
+                    <div class="month-tag">8월 (병신월, 8/7~9/7) · 지남</div>
+                    <div class="month-desc">신금 중첩(인신충). 운전 안전사고 조심 및 예상치 못한 지출 관리.</div>
+                </div>
+                <div class="month-item" style="border-color: #10b981;">
+                    <div class="month-tag" style="color: #34d399;">11월 (기해월, 11/7~12/6)</div>
+                    <div class="month-desc">토·수 기운 유입으로 열기 진정. 건강 검진 및 자산 정리 길월.</div>
+                </div>
+                <div class="month-item" style="border-color: #ef4444;">
+                    <div class="month-tag" style="color: #f87171;">★ 12월 (경자월, 12/7~1/5)</div>
+                    <div class="month-desc">자오충 2차 충돌. 한파 시기 뇌혈관 질환 주의 및 빙판길 낙상 방지.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2027 -->
+        <div class="year-card">
+            <div class="year-header">
+                <div class="year-title-group">
+                    <span class="year-badge">2027년 (정미년 丁未年 · 만 71세)</span>
+                    <span class="year-status-pill pill-warning">완충 및 비뇨기 점검</span>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">안정화 국면 진입</div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                정화와 미토가 들어와 2026년의 극단적 화기가 한결 진정됩니다. 부동산 및 문서 운이 유리해집니다. 다만 시지 자수와 미토가 <strong>자미원진·해(子未害)</strong>를 이루므로 신장, 방광, 소화기 계통의 정기 검진이 권장됩니다. (주의 월: 정미월 7/7~8/7, 임자월 12/7~2028.1/6)
+            </p>
+        </div>
+
+        <!-- 2028 -->
+        <div class="year-card highlight-danger">
+            <div class="year-header">
+                <div class="year-title-group">
+                    <span class="year-badge">2028년 (무신년 戊申年 · 만 72세)</span>
+                    <span class="year-status-pill pill-danger">세운 인신충 · 최고 경계</span>
+                </div>
+                <div style="font-size: 0.85rem; color: #f87171;">가장 보수적 관리가 필요한 해</div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                정유 대운 후반에 세운 신금(申金)이 원국의 두 신금(연지·일지)에 합세하여 <strong>세 개의 쇠(申)가 하나의 나무(寅·재물/간담)를 치는 강력한 인신충</strong>이 발생합니다. 대운 유금(겁재)도 금 기운을 더합니다.
+                새로운 사업 확장이나 투자, 보증, 부동산 신규 매수는 일절 피하고, 안전사고 예방과 현금성 자산 방어에 전념해야 합니다. (핵심 주의 월: 양력 2월 갑인월, 5월 정사월 삼형, 8월 경신월)
+            </p>
+        </div>
+
+        <!-- 2029 -->
+        <div class="year-card">
+            <div class="year-header">
+                <div class="year-title-group">
+                    <span class="year-badge">2029년 (기유년 己酉年 · 만 73세)</span>
+                    <span class="year-status-pill pill-warning">정유 대운 마지막 해 · 교운기</span>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">겁재 중첩 · 마무리 정리</div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                대운 유금과 세운 유금이 겹쳐 겁재(酉) 기운이 커지고, 유금은 월지 인목과 <strong>인유원진(寅酉怨嗔)</strong>을 이룹니다. 형제·친구·동업자와의 금전 문제, 보증 요청을 경계하고, 대운이 바뀌기 전 해이므로 새 일을 벌이기보다 사업·자산을 정리하는 데 쓰는 것이 좋습니다. (주의 월: 정묘월 3/5~4/4 묘유충, 계유월 9/7~10/7)
+            </p>
+        </div>
+
+        <!-- 2030 -->
+        <div class="year-card highlight-gold">
+            <div class="year-header">
+                <div class="year-title-group">
+                    <span class="year-badge">2030년 (경술년 庚戌年 · 만 74세)</span>
+                    <span class="year-status-pill pill-success">무술 대운 개막 · 안정기</span>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--gold-light);">인생의 큰 안정기 도래</div>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                <strong>2030년 2월경 무술(戊戌) 대운</strong>이 시작됩니다. 대운과 세운의 술토가 월지 인목과 만나 <strong>인술 반합(寅戌 半合)</strong>을 이루어 평생 이어진 인신충의 긴장을 묶어 줍니다. 가정이 화평해지고 심신의 평온을 누리는 시기입니다. 다만 반합으로 화 기운이 모이는 해이므로 진월(경진월 4/5~5/5, 진술충) 무렵 혈압과 집안 수리·이사 결정은 신중히 하십시오.
+            </p>
+        </div>
+    </section>
+
+    <!-- 5. Comparison Table (해석 A vs 해석 B) -->
+    <section>
+        <div class="section-header">
+            <div class="section-num">5</div>
+            <div class="section-title">출생 시각(자정) 기준별 대안 비교 분석</div>
+        </div>
+        <div class="note-box" style="margin: 0 0 14px 0;">
+            <strong>시각 해석 점검</strong>
+            <ul>
+                <li>음력 1월 12일 = 양력 2월 23일, 13일 = 2월 24일 (한국천문연구원 기준 데이터로 재확인)</li>
+                <li>해석 A: 2월 23일 0시 (11일 밤에서 12일로 넘어가는 자정) → 경신일 병자시</li>
+                <li>해석 B: 2월 24일 0시 (12일 밤에서 13일로 넘어가는 자정) → 신유일 무자시</li>
+                <li>일상 표현 "12일 밤 12시"는 12일 밤이 끝나는 자정(해석 B)을 가리키는 경우가 많음 → 가족 기록 확인 필요</li>
+                <li>전라도 경도·균시차 반영 진태양시는 시계보다 약 15분 이름(전날 23시 45분 전후) → 자시는 그대로, 단 야자시(夜子時) 학파를 따르면 일주가 하루씩 앞당겨짐(A → 기미일, B → 경신일)</li>
+            </ul>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">
+            ※ 구전 기록상 '음력 1월 12일 밤 12시'가 12일 자정(00:00)인지, 12일 밤이 지나 13일로 넘어가는 자정인지에 따라 일주가 달라집니다. 양측 모두 강한 금(金) 체질에 대운의 흐름은 일치합니다.
+        </p>
+
+        <div class="table-scroll"><table class="comparison-table">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">비교 항목</th>
+                    <th style="width: 40%;">해석 A (본 감정 기준: 경신일 병자시)</th>
+                    <th style="width: 40%;">해석 B (대안 기준: 신유일 무자시)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>원국 구성</strong></td>
+                    <td>병신년 경인월 <strong>경신일(庚申)</strong> 병자시</td>
+                    <td>병신년 경인월 <strong>신유일(辛酉)</strong> 무자시</td>
+                </tr>
+                <tr>
+                    <td><strong>일간 성향</strong></td>
+                    <td><strong>경금(庚金·무쇠):</strong> 선이 굵고 호탕하며 우직한 현장 장수형 스타일.</td>
+                    <td><strong>신금(辛金·보석/칼):</strong> 섬세하고 깔끔하며 날카로운 판단력을 지닌 학자·전문가형 스타일.</td>
+                </tr>
+                <tr>
+                    <td><strong>지지 충돌</strong></td>
+                    <td>두 개의 신금이 인목을 협공(인신충 중첩)하여 변동과 활동성이 극대화됨.</td>
+                    <td>연지 신금만 인신충을 하고 일지는 유금(酉金)이 되어 내면의 안정성이 비교적 높음.</td>
+                </tr>
+                <tr>
+                    <td><strong>보완 오행</strong></td>
+                    <td>시지의 <strong>자수(상관)</strong>와 후반기 <strong>토(인성)</strong> 대운이 필수 구원투수.</td>
+                    <td>시주 천간에 <strong>무토(정인)</strong>가 떠 있어 원국에 토가 1개 생김 → 인성의 보호를 조금 더 일찍 누림.</td>
+                </tr>
+                <tr>
+                    <td><strong>대운 시작</strong></td>
+                    <td>1960년 2월경 (정유 2020~2029, 무술 2030~)</td>
+                    <td>1959년 10월경 (정유 2019.10~2029.10, 무술 2029.10~)</td>
+                </tr>
+            </tbody>
+        </table></div>
+    </section>
+
+    <!-- 6. Practical Roadmap -->
+    <section>
+        <div class="section-header">
+            <div class="section-num">6</div>
+            <div class="section-title">노년기 운세 극대화 4단계 실천 로드맵</div>
+        </div>
+
+        <div class="roadmap-grid">
+            <div class="roadmap-card">
+                <div class="step-num">Step 1</div>
+                <div class="step-title">출생 시각 확정</div>
+                <div class="step-desc">
+                    11일→12일로 넘어가는 자정(해석 A)인지 12일→13일로 넘어가는 자정(해석 B)인지 가족 기록을 확인하여 경신/신유 일주를 확정합니다.
+                </div>
+            </div>
+
+            <div class="roadmap-card">
+                <div class="step-num">Step 2</div>
+                <div class="step-title">자산 비유동화</div>
+                <div class="step-desc">
+                    2028년(무신년) 인신충과 2029년(기유년) 겁재 중첩의 손재수를 방어하기 위해 2026~2027년 중 유동 현금을 단독 명의 부동산이나 연금으로 묶어둡니다.
+                </div>
+            </div>
+
+            <div class="roadmap-card">
+                <div class="step-num">Step 3</div>
+                <div class="step-title">시기별 건강 검진</div>
+                <div class="step-desc">
+                    2026년 12월(경자월)에는 심혈관·혈압 점검을, 2028년 2월·5월·8월에는 척추·관절 및 낙상 방지에 각별한 주의를 기울입니다. 검사·치료 결정은 의료진 판단을 따릅니다.
+                </div>
+            </div>
+
+            <div class="roadmap-card">
+                <div class="step-num">Step 4</div>
+                <div class="step-title">2030년 무술 대운 안착</div>
+                <div class="step-desc">
+                    2029년(교운기)에 외형적 사업을 정리하고, 2030년 2월경 시작되는 토(인성) 대운에 맞춰 문서 안정과 취미·가정 평화 중심으로 삶을 전환합니다.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="disclaimer-box">
+        본 사주 감정서는 전통 자평명리학(子平命理學)의 격국·억부·조후 이론에 기반한 해석입니다. 만세력 기준: 한국천문연구원 음양력 데이터 · 24절기 시각 계산 · 2026년 10월 검토판.<br>
+        운세의 흐름은 결정론적 숙명이 아니며, 자연의 계절 변화처럼 사전에 취약 구간을 알고 지혜롭게 대비(피흉취길 避凶趨吉)하는 데 목적이 있습니다.
+    </div>
+
+</div>
+
+</body>
+</html>
